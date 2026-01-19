@@ -321,7 +321,7 @@ return [
                 ],
                 [
                     'text' => 'Tipos de Doc.',
-                    'url' => '#',
+                    'url' => 'admin/tipos-documentos/tipo-documento-index',
                 ],
                 
             ],

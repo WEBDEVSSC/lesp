@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AreaController;
+use App\Http\Controllers\TipoDocumentoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -72,6 +73,28 @@ Route::get('admin/areas/areas-edit/{id}',[AreaController::class,'areasEdit'])->n
 Route::put('admin/areas/areas-update/{id}',[AreaController::class,'areasUpdate'])->name('areasUpdate');
 
 Route::delete('admin/areas/areas-delete/{id}',[AreaController::class,'areasDelete'])->name('areasDelete');
+
+/*******************************************************************************************
+ * 
+ * 
+ * RUTA PARA LOS TIPOS DE DOCUENTOS
+ * 
+ * 
+ ******************************************************************************************/
+
+Route::get('admin/tipos-documentos/tipo-documento-index',[TipoDocumentoController::class,'tiposDocumentosIndex'])->name('tiposDocumentosIndex');
+
+Route::get('admin/tipos-documentos/tipo-documento-show/{id}',[TipoDocumentoController::class,'tiposDocumentosShow'])->name('tiposDocumentosShow');
+
+Route::get('admin/tipos-documentos/tipo-documento-create',[TipoDocumentoController::class,'tiposDocumentosCreate'])->name('tiposDocumentosCreate');
+
+Route::post('admin/tipos-documentos/tipo-documento-store',[TipoDocumentoController::class,'tiposDocumentosStore'])->name('tiposDocumentosStore');
+
+Route::get('admin/tipos-documentos/tipo-documento-edit/{id}',[TipoDocumentoController::class,'tiposDocumentosEdit'])->name('tiposDocumentosEdit');
+
+Route::put('admin/tipos-documentos/tipo-documento-update/{id}',[TipoDocumentoController::class,'tiposDocumentosUpdate'])->name('tiposDocumentosUpdate');
+
+Route::delete('admin/tipos-documentos/tipo-documento-delete/{id}',[TipoDocumentoController::class,'tiposDocumentosDelete'])->name('tiposDocumentosDelete');
 
 
 });
