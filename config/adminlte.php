@@ -313,7 +313,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Usuarios',
-                    'url' => '#',
+                    'url' => 'admin/usuarios/usuarios-index',
                 ],
                 [
                     'text' => 'Areas',

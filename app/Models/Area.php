@@ -15,4 +15,10 @@ class Area extends Model
         'responsable',
         'contacto',
     ];
+
+    // app/Models/Area.php
+    public function users()
+    {
+        return $this->hasMany(User::class, 'id_area');
+    }
 }

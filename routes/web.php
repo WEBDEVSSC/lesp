@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\TipoDocumentoController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -95,6 +96,28 @@ Route::get('admin/tipos-documentos/tipo-documento-edit/{id}',[TipoDocumentoContr
 Route::put('admin/tipos-documentos/tipo-documento-update/{id}',[TipoDocumentoController::class,'tiposDocumentosUpdate'])->name('tiposDocumentosUpdate');
 
 Route::delete('admin/tipos-documentos/tipo-documento-delete/{id}',[TipoDocumentoController::class,'tiposDocumentosDelete'])->name('tiposDocumentosDelete');
+
+/*******************************************************************************************
+ * 
+ * 
+ * RUTA PARA LOS TIPOS DE DOCUENTOS
+ * 
+ * 
+ ******************************************************************************************/
+
+Route::get('admin/usuarios/usuarios-index',[UsuarioController::class,'usuariosIndex'])->name('usuariosIndex');
+
+Route::get('admin/usuarios/usuarios-show/{id}',[UsuarioController::class,'usuariosShow'])->name('usuariosShow');
+
+Route::get('admin/usuarios/usuarios-create',[UsuarioController::class,'usuariosCreate'])->name('usuariosCreate');
+
+Route::post('admin/usuarios/usuarios-store',[UsuarioController::class,'usuariosStore'])->name('usuariosStore');
+
+Route::get('admin/usuarios/usuarios-edit/{id}',[UsuarioController::class,'usuariosEdit'])->name('usuariosEdit');
+
+Route::put('admin/usuarios/usuarios-update/{id}',[UsuarioController::class,'usuariosUpdate'])->name('usuariosUpdate');
+
+Route::delete('admin/usuarios/usuarios-delete/{id}',[UsuarioController::class,'usuariosDelete'])->name('usuariosDelete');
 
 
 });
