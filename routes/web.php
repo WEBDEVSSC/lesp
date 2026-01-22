@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AreaController;
+use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\TipoDocumentoController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
@@ -100,7 +101,7 @@ Route::delete('admin/tipos-documentos/tipo-documento-delete/{id}',[TipoDocumento
 /*******************************************************************************************
  * 
  * 
- * RUTA PARA LOS TIPOS DE DOCUENTOS
+ * RUTA PARA LOS USUARIOS
  * 
  * 
  ******************************************************************************************/
@@ -118,6 +119,28 @@ Route::get('admin/usuarios/usuarios-edit/{id}',[UsuarioController::class,'usuari
 Route::put('admin/usuarios/usuarios-update/{id}',[UsuarioController::class,'usuariosUpdate'])->name('usuariosUpdate');
 
 Route::delete('admin/usuarios/usuarios-delete/{id}',[UsuarioController::class,'usuariosDelete'])->name('usuariosDelete');
+
+/*******************************************************************************************
+ * 
+ * 
+ * RUTA PARA LOS DOCUMENTOS
+ * 
+ * 
+ ******************************************************************************************/
+
+Route::get('admin/documentos/documentos-index',[DocumentoController::class,'documentosIndex'])->name('documentosIndex');
+
+Route::get('admin/documentos/documentos-show/{id}',[DocumentoController::class,'documentosShow'])->name('documentosShow');
+
+Route::get('admin/documentos/documentos-create',[DocumentoController::class,'documentosCreate'])->name('documentosCreate');
+
+Route::post('admin/documentos/documentos-store',[DocumentoController::class,'documentosStore'])->name('documentosStore');
+
+Route::get('admin/documentos/documentos-edit/{id}',[DocumentoController::class,'documentosEdit'])->name('documentosEdit');
+
+Route::put('admin/documentos/documentos-update/{id}',[DocumentoController::class,'documentosUpdate'])->name('documentosUpdate');
+
+Route::delete('admin/documentos/documentos-delete/{id}',[DocumentoController::class,'documentosDelete'])->name('documentosDelete');
 
 
 });
