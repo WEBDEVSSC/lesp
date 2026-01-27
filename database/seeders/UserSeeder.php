@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'name' => 'Administrador WEB',
             'email' => 'soportewebssc@lesp.com',
             'password' => Hash::make('LespAdmin0923'),
+            'curp' => 'AAAA000000AAAAAA00'
         ]);
     }
 }
